@@ -3,70 +3,105 @@ margin: 0;
 padding: 0;
 box-sizing: border-box;
 font-family: Helvetica;
+font-size: 14px;
 }
 
 h1 {
 	text-align: center;
+	font-size: 1.75em;
 	font-family: Helvetica;
-	margin: 25px;
+	margin-top: 25px;
 }
 
 .container {
-	margin-top: 35px;
 	width: 100%;
-	height: 40%;
-	border: 3px solid redz;
+	margin-top: 20px;
 }
 
-.col-lg-4 {
+.col-lg-4, .col-md-6, .col-md-12, .col-sm-12 {
 	position: relative;
-    float: left;
-	width: 33.33%;
-	border: 3px solid orangez;
-
+	float: left;
 }
 
-.col-lg-4 > div {
+.section {
 	position: relative;
 	background-color: lightgray;
 	width: 90%;
 	height: 150px;
+	margin-top: 20px;
 	margin-left: auto; 
 	margin-right: auto;
-	overflow: auto; 
-	border: 1px solid green;
+	overflow: hidden; 
+	border: 1px solid black;
 }
 
-.col-lg-4 > div > div {
+#title1, #title2, #title3 {
 	position: relative;
-	height: 30px;
+	width: 205px;
 	float: right;
 	border: 1px solid black;
-	background-color: lightblue;
-	color: black;
+	text-align: center;
+	font-size: 1.25em;
 	font-weight: bold;
-	padding: 5px 10px 5px 10px;
+	padding: 5px 0px;
 	overflow: hidden;
 }
 
 .col-lg-4 > div > p {
 	position: relative;
 	clear: right;
-	margin: 50px 15px 10px 15px;
+	margin: 40px 10px 40px 10px;
 	line-height: 1.5;
 }
 
 #title1 {background-color: #E0FFFF;}
 #title2 {background-color: #AFEEEE;}
-#title3 {background-color: #4682B4; 
-	color: white;}
+#title3 {background-color: #4682B4; color: white;}
 
-/*****************MEDIUM****************/
-@media (min-width: 768px) and (max-width: 991px) {
+/*---------------LARGE-------------------------*/
+@media (min-width: 992px) {
+	.col-lg-4 {
+		width: 33.33%;
+	}
+	#section-one {
+		left: 2%;
+	}
 	
+	#section-three {
+		right: 2%;
+	}
+
 }
 
-/*****************SMALL****************/
-@media (max-width: 767px) {
+/*----------------MEDIUM-----------------------*/
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-md-6 {		
+		width: 50%;
+	}
 
+	.col-md-12 {
+		width: 100%;
+	}
+	
+	#section-one {
+		margin-right: 2%;
+		width: 93%;
+	}
+
+	#section-two {
+		margin-left: 2%;
+		width: 93%;
+	}
+
+	#section-three {
+		width: 95%;
+	}
+}
+
+/*-----------------SMALL---------------------*/
+@media (max-width: 767px) {
+	.col-sm-12{
+		width: 100%;
+		float: none;
+	}
 }
